@@ -1,4 +1,8 @@
+# -*- coding: utf-8 -*-
 __author__ = 'Dimasik'
+# На кириллицу ругался и пришлось использовать транслит?
+# А всего-то надо было строчку добавить.
+
 import math
 w = int(raw_input('Vvedite shiriny: '))
 h = int(raw_input('Vvedite dliny: '))
