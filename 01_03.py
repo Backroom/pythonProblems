@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'slaer'
 M = (0,0,1,0,1,0,0)
 L = (17, 40, 65, 24, 12, 13, 42)
@@ -15,3 +16,22 @@ for i in MM:
 print 'First list: ', MM
 print 'Second list: ', LL
 print 'Result: ', L1
+
+# Надо все проще:
+
+def setMaskToTuple(tupleIn, mask):
+    resultList = []
+    for i in xrange(len(tupleIn)):
+        if mask[i] == 0:
+            resultList.append(0)
+        else:
+            resultList.append(tupleIn[i])
+
+    resultTuple = tuple(resultList)
+    return resultTuple
+
+# Опять-таки смотрите формулировку задачи — на вход два кортежа и один на выходе
+# TODO: добавить обработку такой ситуации, когда длины кортежей не равны меду собой
+
+
+print setMaskToTuple(L, M)
