@@ -5,11 +5,11 @@ BANKNOTES_NOMINAL_LIST = (5000, 1000, 500, 100, 50, 10)
 
 def getBanknotesCountFromSum(moneySum):
     nominalsDict = {}
-    for i in BANKNOTES_NOMINAL_LIST:
-        nominalsDict[i] = 0
-        while moneySum > i:
-            moneySum -= i
-            nominalsDict[i] += 1
+    for nominal in BANKNOTES_NOMINAL_LIST:
+        nominalsDict[nominal] = 0
+        while moneySum > nominal:
+            moneySum -= nominal
+            nominalsDict[nominal] += 1
     nominalsDict['ost'] = moneySum
     return nominalsDict
 
