@@ -5,14 +5,17 @@ L = (17, 40, 65, 24, 12, 13, 42)
 #Result L1 = (0, 0, 65, 0, 12, 0, 0)#
 MM,LL = list(M),list(L)
 L1,c,k = [],L[0],0
-for i in MM:
-    k += 1
-    if k == 3:
-        c = LL[2]
-    elif k == 5:
-        c = LL[4]
-    else: c = L[0]
-    L1.append(i*c)
+if len(MM) != len(LL):              #!!!Добавил обработку такой ситуации, когда длины кортежей не равны меду собой
+    print 'turples dont equals'
+else:
+    for i in MM:
+        k += 1
+        if k == 3:
+            c = LL[2]
+        elif k == 5:
+            c = LL[4]
+        else: c = L[0]
+        L1.append(i*c)
 print 'First list: ', MM
 print 'Second list: ', LL
 print 'Result: ', L1
@@ -26,6 +29,7 @@ def setMaskToTuple(tupleIn, mask):
             resultList.append(0)
         else:
             resultList.append(tupleIn[i])
+
 
     resultTuple = tuple(resultList)
     return resultTuple
