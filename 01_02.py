@@ -25,7 +25,7 @@ def getMaxSeqInTuple(tupleIn):
     # в некоторых случаях (переменная count, например) нам надо прибавлять к еще
     # «не готовой» переменной — соответственно мы заранее присваем этой переменной начальное
     # значение. TODO: убрать лишние переменные в 28 строке:
-    count, maxCount, maxNumber, i, k, x, number = 0, 0, 0, 0, 0, 0, []
+    count, maxCount, i, x, number = 0, 0, 0, 0, []    # !!!Убрал k, maxNumber
     # Кроме того — пробел после запятой повышает читабельность кода. Обязательно!
 
     sortedList = list(tupleIn)
@@ -43,9 +43,8 @@ def getMaxSeqInTuple(tupleIn):
     for i in sortedList:            # TODO: Разобраться почему строка лишняя и удалить ее
         if i in number:
             count += 1
-            if count < maxCount:
-                pass                # Лишний pass — можно обойтись и без него
-            else:
+            if count > maxCount:    #!!! Поменял знак условия if на ">", следовательно "pass" убрался
+                #pass               # Лишний pass — можно обойтись и без него
                 maxCount = count
                 maxNumber = i
         else:
