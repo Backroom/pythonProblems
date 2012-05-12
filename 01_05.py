@@ -4,15 +4,24 @@ __author__ = 'Dimasik'
 # А всего-то надо было строчку добавить.
 
 import math
-w = int(raw_input('Vvedite shiriny: '))
-h = int(raw_input('Vvedite dliny: '))
-d = int(raw_input('Vvedite diametr: '))
-sp= w*h
-print 'Ploshad pryamoygolnika: ', sp
-sk= math.pi*d**2/4
-print 'Ploshad kruga: ', sk
-if sk>sp:
-    print 'plochady kruga bolshe,ne proneset kovrik '
-elif sk<sp:
-    print'ploshady kruga menche,proneset kovrik'
-else: print 'oni ravhi'
+P = ((5, 10), (7, 10), (3, 4), (8, 12), (6, 9))
+K = (4, 12, 5, 9)
+R = {5: ((5, 10), (7, 10), (8, 12), (6, 9))}
+SP = []
+SK = []
+SS = {}
+for x in P:
+    print 'Площадь прямоугольника: ',x,'-',x[0]*x[1]
+    SP.append(x[0]*x[1])
+for x in K:
+    print 'Площадь круга:', x, '-', math.pi*x**2/4
+    SK.append(int(math.pi*x**2/4))
+print SP
+print SK
+for k in SK:
+   for p in SP:
+       if k < p:
+           SS[k] = p
+print SS
+
+
