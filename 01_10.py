@@ -5,5 +5,5 @@ for i in L1:
     if i < 0:
         LM.append(i)
     else: LP.append(i)
-res = tuple([LM] + [LP])
+res = tuple([LM]+[LP])
 print res
