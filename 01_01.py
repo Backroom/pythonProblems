@@ -14,7 +14,7 @@ def setDictMinMaxAvgFromTuple(tupleIn):
 
     # tupleSum = 0.0    # Вот фактически первая ошибка
                         # Ну и лишнее напоминание про название для переменных
-    tupleSum = 0        # !!!Исправил значение переменной turpleSum на тип Int
+    tupleSum = 0.0        # !!!Исправил значение переменной turpleSum на тип Int
     for i in L:
         tupleSum += i   # Лучше использовать оператор "+=" - это повышает читабельность кода
     print tupleSum      # Такой принт полезен при отладке (это так и называется - отладка принтами),
@@ -28,7 +28,7 @@ def setDictMinMaxAvgFromTuple(tupleIn):
     return {'min': min(tupleIn), 'max': max(tupleIn), 'average': tupleSum/x}
 
 
-L = (4, 12, 16, 56, 23, 24, 17, 34, 12, 34, 5, 6, 23,18)
+L = (4, 12, 16, 56, 23, 24, 17, 34, 12, 34, 5, 6, 23, 18)
 D = setDictMinMaxAvgFromTuple(L)
 print D
 
