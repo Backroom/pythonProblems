@@ -11,4 +11,4 @@ for i in listTaskDict:
         marksStudents.append(i)
         mark += 1
 print marksStudents
-print 'Правильных ответов: ',mark
+print 'Правильных ответов:', mark
