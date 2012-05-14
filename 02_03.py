@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'slaer'
 import random
-marksStudents = []
-mark = 0
+marksStudents, mark = [], 0
 taskDict = {key: random.choice('abcdef') for key in range(1,21)}
 answerDict = {key: random.choice('abcdef') for key in range(1,21)}
 listTaskDict, listAnswerDict = taskDict.items(),answerDict.items()
