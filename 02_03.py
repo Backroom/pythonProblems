@@ -4,7 +4,7 @@ import random
 marksStudents, mark = [], 0
 taskDict = {key: random.choice('abcdef') for key in range(1,21)}
 answerDict = {key: random.choice('abcdef') for key in range(1,21)}
-listTaskDict, listAnswerDict = taskDict.items(),answerDict.items()
+listTaskDict, listAnswerDict = taskDict.items(), answerDict.items()
 for i in listTaskDict:
     if i in listAnswerDict:
         marksStudents.append(i)
