@@ -81,15 +81,15 @@ def getMaxSeqInTupleOther(tupleIn):
     currentCount = 0
     resultDict = {'number': 0, 'count': 0}      # Очевидно, что в начале словарь пустой
 
-    for i in incSortedList:
-        if i == currentNumber:
+    for item in incSortedList:
+        if item == currentNumber:
             currentCount += 1
         else:
             if currentCount > resultDict['number']:
                 resultDict['number'] = currentNumber
                 resultDict['count'] = currentCount
                 currentCount = 0
-            currentNumber = i
+            currentNumber = item
 
     return resultDict
 
